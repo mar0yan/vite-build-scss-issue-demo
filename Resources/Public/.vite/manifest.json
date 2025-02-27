@@ -1,0 +1,24 @@
+{
+  "src/javascript/main.js": {
+    "file": "javascripts/main.js",
+    "name": "main",
+    "src": "src/javascript/main.js",
+    "isEntry": true
+  },
+  "src/javascript/tportal.js": {
+    "file": "javascripts/tportal.js",
+    "name": "tportal",
+    "src": "src/javascript/tportal.js",
+    "isEntry": true
+  },
+  "src/sass/critical.scss": {
+    "file": "styles/critical-css.css",
+    "src": "src/sass/critical.scss",
+    "isEntry": true
+  },
+  "src/sass/index.scss": {
+    "file": "styles/index-css.css",
+    "src": "src/sass/index.scss",
+    "isEntry": true
+  }
+}

@@ -1,0 +1,10 @@
+body {
+    font-style: italic;
+    font-weight: bold;
+    background: slateblue;
+    @apply pb-4 px-4 pt-6 text-blue-500;
+}
+
+.simple-test {
+    @apply text-blue-500;
+}

@@ -1,0 +1,9 @@
+@use '../configuration' as *;
+
+body {
+    background-color: $color-teal;
+}
+
+h3 {
+    color: blue;
+}
