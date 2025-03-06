@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite Test Document</title>
-    <link rel="stylesheet" href="./Resources/Public/styles/index-css.css" />
-</head>
-<body>
-    <main>
-        Vite demo build --watch problems with .scss @use.
-    </main>
-
+    <!-- <link rel="stylesheet" href="./Resources/Public/styles/index-css.css" /> -->
     <script
-        type="text/javascript"
-        async
-        src="./Resources/Public/javascripts/main.js"
+        type="module"
+        src="./src/javascript/main.js"
     >
     </script>
+</head>
+<body>
+    <h1 class="font-bold">Vite demo build problems using .scss with @use.</h1>
+    <p class="my-4">
+        - Edit the css inside <span class="font-bold">"src/sass/components/_simple-test.scss"</span> and save.<br>
+            -> vite will detect the change but will not build the css.<br><br>
+        - Edit the css inside <span class="font-bold">"src/sass/index.scss"</span> directly<br>
+            -> vite correctly rebuilds and injects the css.<br><br>
+        - Change the component css and then save the index.scss once (without changing it)<br>
+            -> the code builds correctly.<br><br>
+
+        There seems to be a problem with @use? Vite does not detect "_simple-test.scss" to be part of the index.scss file.<br>
+
+        Using vite build --watch or just the devServer via vite has the same effect.<br><br>
+
+        When running vite build, the code builds correctly.
+
+    </p>
+    <main>
+        <p class="simple-test">
+            This is my custom Text inside main to demonstrate the issue.
+        </p>
+    </main>
 </body>
 </html>

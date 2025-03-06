@@ -3,8 +3,7 @@ import path from 'path';
 import tailwindcss from '@tailwindcss/postcss';
 
 export default defineConfig({
-  plugins: [
-  ],
+  plugins: [],
   css: {
     postcss: {
       plugins: [
@@ -13,8 +12,11 @@ export default defineConfig({
     },
   },
   server: {
-    hmr: false,
-  },
+    watch: [
+        'src/javascript/*.js',
+        'src/sass/**/*.scss',
+    ],
+},
   build: {
     // generate .vite/manifest.json in outDir
     manifest: true,
@@ -25,7 +27,6 @@ export default defineConfig({
             'src/javascript/*.js',
             'src/sass/*.scss',
             'src/sass/**/*.scss',
-            'Resources/Private/**'
         ],
     },
     rollupOptions: {
